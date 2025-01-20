@@ -5,10 +5,10 @@
              Title="Lista">
     <!--Esta vista deberia estar dentro de la carpeta llamada Views pero al momento de ponerla dentro no funciona mi TabBar  -->
     
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        
+        <ListView>
+            
+        </ListView>
+    
+    
 </ContentPage>
