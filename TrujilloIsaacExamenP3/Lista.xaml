@@ -9,6 +9,7 @@
         <ListView>
             
         </ListView>
-    
-    
+    <Button Text="Buscar"
+Command="{Binding BuscarBDDCommand}" />
+
 </ContentPage>
