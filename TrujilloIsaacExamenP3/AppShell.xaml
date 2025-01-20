@@ -6,10 +6,20 @@
     xmlns:local="clr-namespace:TrujilloIsaacExamenP3"
     Shell.FlyoutBehavior="Disabled"
     Title="TrujilloIsaacExamenP3">
+    <TabBar>
+        <Tab
+            Title="API">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+       
+        </Tab>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        <Tab
+    Title="Lista">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+
+        </Tab>
+
+    </TabBar>
+
 
 </Shell>
