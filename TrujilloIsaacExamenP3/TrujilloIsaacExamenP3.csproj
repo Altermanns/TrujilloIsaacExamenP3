@@ -65,10 +65,11 @@
 
 	<ItemGroup>
 	  <Folder Include="ViewsModels\" />
+	  <Folder Include="Views\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\Lista.xaml">
+	  <MauiXaml Update="Lista.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

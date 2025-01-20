@@ -1,4 +1,4 @@
-namespace TrujilloIsaacExamenP3.Views;
+namespace TrujilloIsaacExamenP3;
 
 public partial class Lista : ContentPage
 {

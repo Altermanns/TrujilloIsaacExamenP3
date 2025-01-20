@@ -15,7 +15,7 @@
 
         <Tab
     Title="Lista">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:Lista}"/>
 
         </Tab>
 
