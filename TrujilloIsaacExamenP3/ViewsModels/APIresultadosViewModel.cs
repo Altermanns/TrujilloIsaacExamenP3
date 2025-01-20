@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using SQLite;
@@ -51,20 +52,24 @@ namespace TrujilloIsaacExamenP3.ViewsModels
             {
                 using var httpClient = new HttpClient();
                 var url = $"https://restcountries.com/v3.1/name/{Nombre}?fields=name,region,maps";
-                var resultado = await httpClient.GetFromJsonAsync<List<dynamic>>(url);
+                var resultado = await httpClient.GetFromJsonAsync<List<JsonElement>>(url);
 
                 if (resultado != null && resultado.Any())
                 {
                     var pais = resultado.First();
+
+                    var nombreOficial = pais.GetProperty("name").GetProperty("common").GetString();
+                    var region = pais.GetProperty("region").GetString();
+                    var linkGoogle = pais.GetProperty("maps").GetProperty("googleMaps").GetString();
+
                     var nuevoPais = new Mapa
                     {
-                        Nombreoficial = pais.name.common,
-                        Región = pais.region,
-                        LinkGoogle = pais.maps.googleMaps,
+                        Nombreoficial = nombreOficial,
+                        Región = region,
+                        LinkGoogle = linkGoogle,
                         NombreEstu = "ITrujillo"
                     };
 
-                    // Guarda el nuevo país en la base de datos
                     await App.Database.InsertAsync(nuevoPais);
                     await App.Current.MainPage.DisplayAlert("Éxito", "País guardado correctamente.", "OK");
                 }
@@ -78,6 +83,7 @@ namespace TrujilloIsaacExamenP3.ViewsModels
                 await App.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
             }
         }
+
 
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
