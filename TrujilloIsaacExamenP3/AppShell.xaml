@@ -7,19 +7,7 @@
     Shell.FlyoutBehavior="Disabled"
     Title="TrujilloIsaacExamenP3">
     <TabBar>
-        <Tab
-            Title="API">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
-       
-        </Tab>
-
-        <Tab
-    Title="Lista">
-            <ShellContent ContentTemplate="{DataTemplate local:Lista}"/>
-
-        </Tab>
-
+        <ShellContent Title="Buscador" ContentTemplate="{DataTemplate views:MainPage}" />
+        <ShellContent Title="Lista" ContentTemplate="{DataTemplate views:Lista}" />
     </TabBar>
-
-
 </Shell>

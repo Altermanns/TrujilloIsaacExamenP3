@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrujilloIsaacExamenP3.Lista"
              Title="Lista">
-    <!--Esta vista deberia estar dentro de la carpeta llamada Views pero al momento de ponerla dentro no funciona mi TabBar  -->
-    
-        
-        <ListView>
-            
-        </ListView>
-    <Button Text="Buscar"
-Command="{Binding BuscarBDDCommand}" />
 
+    <ContentPage.BindingContext>
+        <viewModels:ListaViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20">
+        <ListView x:Name="scordova_list1" ItemsSource="{Binding Paises}" />
+        <Button x:Name="scordova_btnCargar" Text="Cargar Paises" Command="{Binding CargarPaisesCommand}" />
+    </VerticalStackLayout>
 </ContentPage>

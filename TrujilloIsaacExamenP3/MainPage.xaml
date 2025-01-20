@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrujilloIsaacExamenP3.MainPage">
 
+    <ContentPage.BindingContext>
+        <viewModels:BuscadorViewModel />
+    </ContentPage.BindingContext>
+
     <ScrollView>
-        <VerticalStackLayout
-             Padding="20" Spacing="15">
-            <Label Text="Nombre del Pais" FontSize="Medium" />
-            <Entry Placeholder="Ingresa el Pais" Text="{Binding Nombre}" />
-            <Button Text="Buscar"
-        Command="{Binding BuscarAPICommand}" />
-           
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label x:Name="scordova_label1" Text="Nombre del País" FontSize="Medium" />
+            <Entry x:Name="scordova_entry1" Placeholder="Ingresa el país" Text="{Binding Nombre}" />
+            <Button x:Name="scordova_btnBuscar" Text="Buscar" Command="{Binding BuscarCommand}" />
+            <Button x:Name="scordova_btnLimpiar" Text="Limpiar" Command="{Binding LimpiarCommand}" />
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
