@@ -6,7 +6,7 @@
 
 
     <VerticalStackLayout Padding="20">
-        <ListView x:Name="scordova_list1" ItemsSource="{Binding Paises}" />
-        <Button x:Name="scordova_btnCargar" Text="Cargar Paises" Command="{Binding CargarPaisesCommand}" />
+        <ListView x:Name="Trujillo_list1" ItemsSource="{Binding Paises}" />
+        <Button x:Name="Trujillo_btnCargar" Text="Cargar Paises" Command="{Binding CargarPaisesCommand}" />
     </VerticalStackLayout>
 </ContentPage>
