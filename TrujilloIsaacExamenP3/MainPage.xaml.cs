@@ -1,12 +1,12 @@
-﻿namespace TrujilloIsaacExamenP3
+﻿using TrujilloIsaacExamenP3.ViewsModels;
+namespace TrujilloIsaacExamenP3
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new APIresultadosViewModel();
         }
     }
 }

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="TrujilloIsaacExamenP3.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:TrujilloIsaacExamenP3"
+    xmlns:views="clr-namespace:TrujilloIsaacExamenP3"
     Shell.FlyoutBehavior="Disabled"
     Title="TrujilloIsaacExamenP3">
     <TabBar>
-        <ShellContent Title="Buscador" ContentTemplate="{DataTemplate views:MainPage}" />
+       <!-- <ShellContent Title="Buscador" ContentTemplate="{DataTemplate views:Buscar}" /> -->
+        <ShellContent Title="Buscador" ContentTemplate="{DataTemplate views:BuscarPais}" /> 
         <ShellContent Title="Lista" ContentTemplate="{DataTemplate views:Lista}" />
     </TabBar>
 </Shell>

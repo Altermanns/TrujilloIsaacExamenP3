@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TrujilloIsaacExamenP3.MainPage">
-
+             x:Class="TrujilloIsaacExamenP3.BuscarPais"
+             Title="BuscarPais">
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
             <Label x:Name="trujillo_label1" Text="Nombre del País" FontSize="Medium" />

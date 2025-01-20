@@ -4,9 +4,6 @@
              x:Class="TrujilloIsaacExamenP3.Lista"
              Title="Lista">
 
-    <ContentPage.BindingContext>
-        <viewModels:ListaViewModel />
-    </ContentPage.BindingContext>
 
     <VerticalStackLayout Padding="20">
         <ListView x:Name="scordova_list1" ItemsSource="{Binding Paises}" />
